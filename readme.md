@@ -2,6 +2,10 @@
 
 Aplikasi web absensi untuk pegawai Non-ASN di lingkungan BBWS Citanduy, dikembangkan saat PKL di Unit Hidrologi dan Kualitas Air.
 
+## Demo
+
+🌐 **Live:** https://absenbbwscty.ct.ws/absensi-nonasn/
+
 ## Fitur
 
 - Login pegawai & admin
@@ -192,7 +196,16 @@ Scan QR dari HP menggunakan kamera — HP akan membuka halaman `scan.php` via HT
 
 ### Akun Default
 
-Setelah import database, login menggunakan akun admin yang sudah ada di data contoh, atau buat akun baru via halaman registrasi.
+Setelah import database, gunakan akun berikut untuk login pertama kali:
+
+| Role | Username | Password |
+|------|----------|----------|
+| Admin | `admin` | `admin123` |
+
+> ⚠️ **Penting:** Segera ganti password setelah pertama kali login melalui phpMyAdmin dengan query:
+> ```sql
+> UPDATE users SET password = SHA2('PasswordBaru', 256) WHERE username = 'admin';
+> ```
 
 ## Struktur Folder
 
