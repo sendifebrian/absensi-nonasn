@@ -365,6 +365,14 @@ ALTER TABLE `izin`
 INSERT INTO `settings` (`id`, `jam_masuk`, `jam_pulang`, `latitude`, `longitude`, `radius`, `toleransi_terlambat`, `wa_admin`, `base_url`, `maintenance_mode`, `maintenance_pesan`) VALUES
 (1, '07:30:00', '16:00:00', '-7.36534400', '108.56056200', 200, 115, '628xxxxxxxxxx', 'http://localhost/absensi-nonasn', 0, '');
 
+--
+-- Akun admin default untuk testing
+-- Ganti password setelah pertama kali login!
+--
+
+INSERT INTO `users` (`nama`, `username`, `password`, `role`, `tipe`, `status`) VALUES
+('Administrator', 'admin', SHA2('admin123', 256), 'admin', 'pegawai', 'aktif');
+
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
