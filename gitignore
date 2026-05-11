@@ -1,0 +1,17 @@
+# Database config (jangan diupload, berisi password!)
+config/database.php
+
+# Foto & file upload pegawai (data pribadi!)
+uploads/selfie/
+uploads/bukti/
+
+# Session files
+sessions/qr/sess_*
+sessions/web/sess_*
+
+# File Google Search Console
+google*.html
+
+# File sensitif lainnya
+.env
+*.log

@@ -1,0 +1,42 @@
+Options -Indexes
+AddType application/manifest+json .json
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /absensi-nonasn/
+
+    # ── Jangan rewrite file/folder yang benar-benar ada ──────────────
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # ── Root ─────────────────────────────────────────────────────────
+    RewriteRule ^login$           login.php [L,QSA]
+    RewriteRule ^lupa-password$   lupa_password.php [L,QSA]
+    RewriteRule ^qr$              qr.php [L,QSA]
+    RewriteRule ^scan$            scan.php [L,QSA]
+    RewriteRule ^foto$            foto.php [L,QSA]
+
+    # ── Admin ─────────────────────────────────────────────────────────
+    RewriteRule ^admin/dashboard$       admin/dashboard.php [L,QSA]
+    RewriteRule ^admin/pegawai$         admin/pegawai.php [L,QSA]
+    RewriteRule ^admin/rekap$           admin/rekap.php [L,QSA]
+    RewriteRule ^admin/cuti$            admin/cuti.php [L,QSA]
+    RewriteRule ^admin/izin$            admin/izin.php [L,QSA]
+    RewriteRule ^admin/wfa$             admin/wfa.php [L,QSA]
+    RewriteRule ^admin/wfh$             admin/wfh.php [L,QSA]
+    RewriteRule ^admin/hari-libur$      admin/hari_libur.php [L,QSA]
+    RewriteRule ^admin/qr-generator$    admin/qr_generator.php [L,QSA]
+    RewriteRule ^admin/settings$        admin/settings.php [L,QSA]
+    RewriteRule ^admin/logout$          admin/logout.php [L,QSA]
+
+    # ── Pegawai ───────────────────────────────────────────────────────
+    RewriteRule ^pegawai/dashboard$     pegawai/dashboard.php [L,QSA]
+    RewriteRule ^pegawai/absensi$       pegawai/absensi.php [L,QSA]
+    RewriteRule ^pegawai/riwayat$       pegawai/riwayat.php [L,QSA]
+    RewriteRule ^pegawai/cuti$          pegawai/cuti.php [L,QSA]
+    RewriteRule ^pegawai/izin$          pegawai/izin.php [L,QSA]
+    RewriteRule ^pegawai/profil$        pegawai/profil.php [L,QSA]
+    RewriteRule ^pegawai/upload-foto$   pegawai/upload_foto.php [L,QSA]
+    RewriteRule ^pegawai/logout$        pegawai/logout.php [L,QSA]
+</IfModule>

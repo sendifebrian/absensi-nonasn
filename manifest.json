@@ -1,0 +1,25 @@
+{
+  "name": "Absensi Non-ASN BBWS Citanduy",
+  "short_name": "Absen BBWS",
+  "description": "Sistem Absensi Non-ASN Balai Besar Wilayah Sungai Citanduy",
+  "start_url": "/absensi-nonasn/login.php",
+  "scope": "/absensi-nonasn/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1e3a5f",
+  "theme_color": "#1e3a5f",
+  "icons": [
+    {
+      "src": "/absensi-nonasn/assets/img/logo-instansi.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/absensi-nonasn/assets/img/logo-instansi.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

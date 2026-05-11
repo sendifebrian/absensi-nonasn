@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /absensi-nonasn/login.php
+Allow: /absensi-nonasn/lupa_password.php
+Disallow: /absensi-nonasn/admin/
+Disallow: /absensi-nonasn/pegawai/
+Disallow: /absensi-nonasn/api/
+Disallow: /absensi-nonasn/config/
+Disallow: /absensi-nonasn/sessions/
+Disallow: /absensi-nonasn/uploads/
+
+Sitemap: https://absenbbwscty.ct.ws/absensi-nonasn/sitemap.xml
